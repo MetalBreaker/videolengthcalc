@@ -96,7 +96,7 @@ namespace VideoLength
                ProcessStartInfo info = new ProcessStartInfo
                {
                    WorkingDirectory = Directory.GetCurrentDirectory(),
-                   CreateNoWindow = false,
+                   CreateNoWindow = true,
                    RedirectStandardOutput = true,
                    FileName = _ffprobePath,
                    Arguments = $"-v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 {SanitizeInput(file)}"
